@@ -83,11 +83,12 @@ class OrganisationController extends Controller
         } else {            
             $arr = array();
             foreach ($values as $row) {                
-                $arr[] = json_encode($row, JSON_UNESCAPED_UNICODE);
+                $arr[] = $row;
+
                 // Print columns A and E, which correspond to indices 0 and 4.
                 //printf("%s, %s\n", $row[6], $rating);
             }
-            return $arr;
+            return json_encode($arr, JSON_UNESCAPED_UNICODE);
         }
         
         //echo "It works Yeah))!";

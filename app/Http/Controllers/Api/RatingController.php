@@ -92,7 +92,7 @@ class RatingController extends Controller
                         $rating++;
                     }
                 }
-                $arr[$row[6]] = $rating;
+                $arr[] = array("name" => $row[6], "rating" => $rating);
                 // Print columns A and E, which correspond to indices 0 and 4.
                 // printf("%s, %s\n", $row[6], $rating);
             }
