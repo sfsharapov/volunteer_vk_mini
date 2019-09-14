@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('volunteers', 'Api\VolunteerController');
 Route::apiResource('geolocation', 'Api\GeolocationController');
+Route::apiResource('rating', 'Api\RatingController');
 Route::get('volunteer/visit/{user}', 'Api\VolunteerController@visitCounter')->name('volunteer.visit');
 Route::get('geolocation/calc/{lat}/{long}', 'Api\GeolocationController@calculate')->name('geolocation.calculate');
 ;
