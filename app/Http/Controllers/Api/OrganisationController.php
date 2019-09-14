@@ -9,7 +9,7 @@ use Google_Service_Sheets;
 use Google_Service_Sheets_ValueRange;
 use Google_Service_Sheets_BatchUpdateValuesRequest;
 
-class RatingController extends Controller
+class OrganisationController extends Controller
 {
     function getClient()
     {
@@ -74,30 +74,20 @@ class RatingController extends Controller
         // Prints the names and majors of students in a sample spreadsheet:
         // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
         $spreadsheetId = '1j7cUS-sjoIvfYUA4k_H1dOS0RU6Kow5Qxy_-vJ61KO8';
-        $range = 'DB_VOL!A4:Z';
-        $rangeR = 'DB_VOL!H4:Z';
+        $range = 'ORG!A2:H';        
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
-        $responseR = $service->spreadsheets_values->get($spreadsheetId, $rangeR);
         $values = $response->getValues();
-        $valuesR = $responseR->getValues();
 
         if (empty($values)) {
             print "No data found.\n";
         } else {            
             $arr = array();
             foreach ($values as $row) {                
-                $rating = 0;
-                foreach ($row as $cell) {
-                    if ($cell == "1") {
-                        $rating++;
-                    }
-                }
-                $arr[$row[6]] = $rating;
+                $arr[] = json_encode($row, JSON_UNESCAPED_UNICODE);
                 // Print columns A and E, which correspond to indices 0 and 4.
-                // printf("%s, %s\n", $row[6], $rating);
+                //printf("%s, %s\n", $row[6], $rating);
             }
-
-            return json_encode($arr);
+            return $arr;
         }
         
         //echo "It works Yeah))!";
