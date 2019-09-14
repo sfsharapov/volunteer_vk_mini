@@ -428,16 +428,16 @@
         },
         {
             "name": "google/apiclient",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client.git",
-                "reference": "ea5c94d975c150b6eb892abb5536d24205376d4e"
+                "reference": "cd3c37998020d91ae4eafca4f26a92da4dabba83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/ea5c94d975c150b6eb892abb5536d24205376d4e",
-                "reference": "ea5c94d975c150b6eb892abb5536d24205376d4e",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/cd3c37998020d91ae4eafca4f26a92da4dabba83",
+                "reference": "cd3c37998020d91ae4eafca4f26a92da4dabba83",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2019-09-09T16:04:18+00:00"
+            "time": "2019-09-11T17:38:10+00:00"
         },
         {
             "name": "google/apiclient-services",
@@ -3615,16 +3615,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "1.6.4",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "43b825a2f77805d1d5495c64eecd272b05ab0e33"
+                "reference": "97244f6d511332f3574acab8242c09ddcfda892b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/43b825a2f77805d1d5495c64eecd272b05ab0e33",
-                "reference": "43b825a2f77805d1d5495c64eecd272b05ab0e33",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/97244f6d511332f3574acab8242c09ddcfda892b",
+                "reference": "97244f6d511332f3574acab8242c09ddcfda892b",
                 "shasum": ""
             },
             "require": {
@@ -3679,7 +3679,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2019-09-13T07:41:17+00:00"
+            "time": "2019-09-13T13:38:04+00:00"
         },
         {
             "name": "facade/ignition-contracts",
