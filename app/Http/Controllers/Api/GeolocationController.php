@@ -22,9 +22,9 @@ class GeolocationController extends Controller
         //echo " ", $distance, " ";
 
         if ($distance < 300) {
-        	echo "OK";
+        	return json_encode("OK");
         } else {
-        	echo "Too far";
+        	return json_encode("Too far");
         }
     }
 

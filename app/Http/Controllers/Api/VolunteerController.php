@@ -137,6 +137,10 @@ class VolunteerController extends Controller
 		$client = $this->getClient();
 		$service = new Google_Service_Sheets($client);
 
+		// $client = new Google_Client();
+		// $client->useApplicationDefaultCredentials();
+		// $client->addScope(Google_Service_Sheets::SPREADSHEETS);
+
 		// Prints the names and majors of students in a sample spreadsheet:
 		// https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 		$spreadsheetId = '1j7cUS-sjoIvfYUA4k_H1dOS0RU6Kow5Qxy_-vJ61KO8';
