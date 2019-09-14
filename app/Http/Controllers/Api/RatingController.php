@@ -84,7 +84,7 @@ class RatingController extends Controller
         if (empty($values)) {
             print "No data found.\n";
         } else {            
-            $cnt = 0;
+            $arr = array();
             foreach ($values as $row) {                
                 $rating = 0;
                 foreach ($row as $cell) {
@@ -92,12 +92,15 @@ class RatingController extends Controller
                         $rating++;
                     }
                 }
+                $arr[$row[6]] = $rating;
                 // Print columns A and E, which correspond to indices 0 and 4.
-                printf("%s, %s\n", $row[0], $rating);
+                //printf("%s, %s\n", $row[6], $rating);
             }
+
+            return json_encode($arr);
         }
         
-        echo "It works Yeah))!";
+        //echo "It works Yeah))!";
     }
 
     /**
